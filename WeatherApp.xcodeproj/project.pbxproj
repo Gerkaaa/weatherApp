@@ -14,6 +14,7 @@
 		C249AF0527BD7FFB00F84653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C249AF0427BD7FFB00F84653 /* Assets.xcassets */; };
 		C249AF0827BD7FFB00F84653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C249AF0627BD7FFB00F84653 /* LaunchScreen.storyboard */; };
 		C249AF1027BD88AA00F84653 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AF0F27BD88AA00F84653 /* CardView.swift */; };
+		C249AF1527BFC46000F84653 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AF1427BFC46000F84653 /* CityModel.swift */; };
 		DED398FE60F6027314EC4D24 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A443C660309D37DBD99542 /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		C249AF0727BD7FFB00F84653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C249AF0927BD7FFB00F84653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C249AF0F27BD88AA00F84653 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C249AF1427BFC46000F84653 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				C249AEFD27BD7FFB00F84653 /* SceneDelegate.swift */,
 				C249AEFF27BD7FFB00F84653 /* ViewController.swift */,
 				C249AF0F27BD88AA00F84653 /* CardView.swift */,
+				C249AF1327BFC43C00F84653 /* Model */,
 				C249AF0127BD7FFB00F84653 /* Main.storyboard */,
 				C249AF0427BD7FFB00F84653 /* Assets.xcassets */,
 				C249AF0627BD7FFB00F84653 /* LaunchScreen.storyboard */,
@@ -85,13 +88,20 @@
 			path = WeatherApp;
 			sourceTree = "<group>";
 		};
+		C249AF1327BFC43C00F84653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C249AF1427BFC46000F84653 /* CityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FE505A0FE1FA73E7D380C484 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				12D11B4B31981F66390B681F /* Pods-WeatherApp.debug.xcconfig */,
 				3C9EE262911994C559E154FB /* Pods-WeatherApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C249AF1527BFC46000F84653 /* CityModel.swift in Sources */,
 				C249AF0027BD7FFB00F84653 /* ViewController.swift in Sources */,
 				C249AEFC27BD7FFB00F84653 /* AppDelegate.swift in Sources */,
 				C249AF1027BD88AA00F84653 /* CardView.swift in Sources */,

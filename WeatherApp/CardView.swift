@@ -27,3 +27,5 @@ class CardView: UIView {
 
 
 }
+
+
