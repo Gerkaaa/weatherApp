@@ -117,6 +117,7 @@
                         <outlet property="cityTemp" destination="enW-Xl-aBh" id="W9C-RV-F8w"/>
                         <outlet property="cityWeather" destination="JLA-QI-aqB" id="l46-r1-IOR"/>
                         <outlet property="tempIcon" destination="Afc-gV-gzS" id="9Fa-Qn-OTA"/>
+                        <outlet property="weatherCard" destination="DYE-fj-Gtc" id="CzD-Oz-cA6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

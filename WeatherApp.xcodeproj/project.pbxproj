@@ -11,7 +11,6 @@
 		C249AEFE27BD7FFB00F84653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AEFD27BD7FFB00F84653 /* SceneDelegate.swift */; };
 		C249AF0027BD7FFB00F84653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AEFF27BD7FFB00F84653 /* ViewController.swift */; };
 		C249AF0327BD7FFB00F84653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C249AF0127BD7FFB00F84653 /* Main.storyboard */; };
-		C249AF0527BD7FFB00F84653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C249AF0427BD7FFB00F84653 /* Assets.xcassets */; };
 		C249AF0827BD7FFB00F84653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C249AF0627BD7FFB00F84653 /* LaunchScreen.storyboard */; };
 		C249AF1027BD88AA00F84653 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AF0F27BD88AA00F84653 /* CardView.swift */; };
 		C249AF1527BFC46000F84653 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AF1427BFC46000F84653 /* CityModel.swift */; };
@@ -27,7 +26,6 @@
 		C249AEFD27BD7FFB00F84653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C249AEFF27BD7FFB00F84653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C249AF0227BD7FFB00F84653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C249AF0427BD7FFB00F84653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C249AF0727BD7FFB00F84653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C249AF0927BD7FFB00F84653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C249AF0F27BD88AA00F84653 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				C249AF0F27BD88AA00F84653 /* CardView.swift */,
 				C249AF1327BFC43C00F84653 /* Model */,
 				C249AF0127BD7FFB00F84653 /* Main.storyboard */,
-				C249AF0427BD7FFB00F84653 /* Assets.xcassets */,
 				C249AF0627BD7FFB00F84653 /* LaunchScreen.storyboard */,
 				C249AF0927BD7FFB00F84653 /* Info.plist */,
 			);
@@ -166,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C249AF0827BD7FFB00F84653 /* LaunchScreen.storyboard in Resources */,
-				C249AF0527BD7FFB00F84653 /* Assets.xcassets in Resources */,
 				C249AF0327BD7FFB00F84653 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

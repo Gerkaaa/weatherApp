@@ -10,6 +10,7 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var weatherCard: CardView!
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var cityTemp: UILabel!
     @IBOutlet weak var tempIcon: UIImageView!
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.weatherCard.isHidden = true
         self.getCityWeather(city: DEFAULT_CITY)
     }
 
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func getCityWeather(city: String) {
-        AF.request(self.buildApiUrl(city: city), method: .get).response { [self]
+        AF.request(self.buildApiUrl(city: city), method: .get).response {
             (responseData) in
             guard let data = responseData.data else {return}
             do {
@@ -41,6 +43,8 @@ class ViewController: UIViewController {
                 guard let img = URL(string: "https://openweathermap.org/img/wn/\(product.weather?.first?.icon ?? "04n")@2x.png") else { return }
                 self.tempIcon.image = UIImage(data: try! Data(contentsOf: img))
                 self.cityWeather.text = product.weather?.first?.main ?? ""
+                
+                self.weatherCard.isHidden = false
             } catch {
                 print("Error: \(error)")
             }
@@ -51,4 +55,6 @@ class ViewController: UIViewController {
         return ("https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(self.API_KEY)")
     }
     
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background.jpg"))
 }
+
