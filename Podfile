@@ -7,5 +7,6 @@ target 'WeatherApp' do
 
   # Pods for WeatherApp
   pod 'Alamofire', '~> 5.5'
+  pod 'IIDadata'
 
 end

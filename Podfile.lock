@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.5.0)
+  - IIDadata (0.2.7)
 
 DEPENDENCIES:
   - Alamofire (~> 5.5)
+  - IIDadata
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IIDadata
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  IIDadata: 9c9e5e94a2a54ecf4945e05d57351e88ad54ac60
 
-PODFILE CHECKSUM: 9bae66a4276d4c40bf7939ffdc8b1f005562f8df
+PODFILE CHECKSUM: fcda9a56cb41f01f07e05a2ef89c65081ba296b1
 
 COCOAPODS: 1.11.2

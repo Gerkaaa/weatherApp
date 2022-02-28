@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYE-fj-Gtc" customClass="CardView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="25" y="276" width="364" height="344"/>
+                                <rect key="frame" x="25" y="170" width="364" height="344"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-OI-Ohm">
                                         <rect key="frame" x="73.5" y="30" width="217.5" height="284"/>
@@ -75,7 +76,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hzg-t6-lyL">
-                                <rect key="frame" x="25" y="670" width="364" height="103"/>
+                                <rect key="frame" x="25" y="564" width="364" height="103"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ваш город" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eb-Dj-aGY">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="44"/>
@@ -84,6 +85,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <segue destination="7aX-Bw-Fe5" kind="popoverPresentation" popoverAnchorView="7eb-Dj-aGY" id="Yjc-ee-YDw">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0m-U5-136">
                                         <rect key="frame" x="0.0" y="59" width="364" height="44"/>
@@ -103,9 +109,9 @@
                         <color key="backgroundColor" red="0.13872104432293489" green="0.25360742775547429" blue="0.46028645833333337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="DYE-fj-Gtc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.879227" id="BuO-RB-7EQ"/>
-                            <constraint firstItem="DYE-fj-Gtc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gdi-vn-zn4"/>
                             <constraint firstItem="Hzg-t6-lyL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="cPN-yr-ofS"/>
                             <constraint firstItem="DYE-fj-Gtc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cZw-PR-SyA"/>
+                            <constraint firstItem="DYE-fj-Gtc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="iWK-0L-LKW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hzg-t6-lyL" secondAttribute="trailing" constant="25" id="jOT-iv-AIB"/>
                             <constraint firstItem="Hzg-t6-lyL" firstAttribute="top" secondItem="DYE-fj-Gtc" secondAttribute="bottom" constant="50" id="puw-Yc-92h"/>
                         </constraints>
@@ -123,6 +129,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="55.580357142857139"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="0ui-vX-3Tl">
+            <objects>
+                <tableViewController storyboardIdentifier="popVC" id="7aX-Bw-Fe5" customClass="TableViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="DTM-jm-jun">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="nOJ-aJ-UfN">
+                                <rect key="frame" x="0.0" y="44.5" width="250" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nOJ-aJ-UfN" id="9nu-hy-xct">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7aX-Bw-Fe5" id="Gap-ms-uit"/>
+                            <outlet property="delegate" destination="7aX-Bw-Fe5" id="0SU-Zm-H5J"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="250" height="250"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FX5-mC-LOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fMJ-u5-E7z">
@@ -146,4 +181,9 @@
             <point key="canvasLocation" x="28.985507246376812" y="55.580357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
