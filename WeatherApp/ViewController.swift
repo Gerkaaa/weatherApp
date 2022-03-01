@@ -33,8 +33,6 @@ class ViewController: UIViewController {
     @IBAction func searchBtn(_ sender: Any) {
         self.getCityWeather(city: self.cityNameField.text!)
         self.cityNameField.text = ""
-        
-        self.showPopover()
     }
     
     func getCityWeather(city: String) {
@@ -65,7 +63,7 @@ class ViewController: UIViewController {
     
     @objc private func showPopover() {
         
-        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "popVC") else { return }
+        guard let popVC = storyboard!.instantiateViewController(withIdentifier: "popVC") as? TableViewController else { return }
         
         popVC.modalPresentationStyle = .popover
         
@@ -73,6 +71,7 @@ class ViewController: UIViewController {
         popOverVC?.delegate = self
         popOverVC?.sourceView = self.cityNameField
         popOverVC?.permittedArrowDirections = .up
+        popVC.cityName = cityNameField.text!
         popVC.preferredContentSize = CGSize(width: self.cityNameField.bounds.width, height: 250)
         
         self.present(popVC, animated: true)
@@ -82,9 +81,7 @@ class ViewController: UIViewController {
         debounce_timer?.invalidate()
         debounce_timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
             if (textField.text?.count ?? 0 >= 3) {
-                let sb = UIStoryboard(name: "Main", bundle:  nil)
-                let vc = sb.instantiateViewController(withIdentifier: "popVC") as! TableViewController
-                vc.getSuggestions(city: textField.text!)
+                self.showPopover()
             }
         }
     }

@@ -10,12 +10,13 @@ import IIDadata
 
 class TableViewController: UITableViewController {
     var citiesList = [AddressSuggestions]()
+    var cityName = ""
+    weak var cityNameField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        getSuggestions(city: cityName)
     }
     
 //    override func viewWillLayoutSubviews() {
@@ -39,6 +40,10 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = textData.value
 
         return cell
+    }
+    
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       print(citiesList[indexPath.row].value!)
     }
 
     func getSuggestions(city: String) {
